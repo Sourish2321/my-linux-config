@@ -1,0 +1,12 @@
+#Config
+
+colors:
+  primary: 
+    background: "#222222"
+    foreground: "#d2d2d2"
+
+font:
+  size: 16.0
+
+window:
+  opacity: 0.5
