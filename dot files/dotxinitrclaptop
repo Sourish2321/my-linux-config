@@ -55,6 +55,8 @@ picom -f &
 # wallpaper
 nitrogen --restore &
 
+# Bluetooth
+blueman-applet	&
 
 # Status Bar
 
@@ -69,9 +71,14 @@ upd(){
 
 }
 
+bat(){
+	bat="$(cat /sys/class/power_supply/axp288_fuel_gauge/capacity)"
+	echo -e "$bat%"
+
+}
 
 while true; do
-	xsetroot -name "$(dte) | $(upd)"
+	xsetroot -name "$(dte) | $(upd) | $(bat)"
 	sleep 1m
 done &
 
